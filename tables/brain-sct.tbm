@@ -1,0 +1,13 @@
+#Conditional Hooks
+
+$Application: FS2_Open
+$On Game Init: [[utility.lua]]
+$On Game Init: [[parse.lua]]
+$On Game Init: [[tableobject.lua]]
+$On Game Init: [[category.lua]]
+$On Game Init: [[entry.lua]]
+$On Game Init: [[attribute.lua]]
+
+$On Game Init: [
+    brain.configs = axemParse:ReadJSON("brain-config.json")
+]

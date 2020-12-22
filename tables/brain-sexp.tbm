@@ -1,0 +1,81 @@
+#Lua SEXPs
+
+$Operator: brain-activate
+    $Category: Change
+    $Subcategory: brain
+    $Minimum Arguments: 1
+    $Maximum Arguments: 1
+    $Return Type: boolean
+    $Description: Activates the brain script functionality for the given ship. Returns true if the brain was activated, false if not.
+    $Parameter:
+        +Description: A ship
+        +Type: ship
+
+$Operator: brain-deactivate
+    $Category: Change
+    $Subcategory: brain
+    $Minimum Arguments: 1
+    $Maximum Arguments: 1
+    $Return type: Nothing
+    $Description: Deactivates brain functionality for the given ship
+    $Parameter:
+        +Description: A ship
+        +Type: ship
+
+$Operator: brain-force-behaviour
+    $Category: Change
+    $Subcategory: brain
+    $Minimum Arguments: 2
+    $Maximum Arguments: 2
+    $Return type: number
+    $Description: Forces a ship to use a given behaviour pattern regardless of actual health. Returns the set behaviour pattern, or -1 if the ship's brain is not active.
+    $Parameter:
+        +Description: A ship
+        +Type: ship
+    $Parameter:
+        +Description: The behaviour state to use. This is 0-indexed, 0 referring to the first preset defined in the ship class' brain config
+        +Type: number
+
+$Operator: brain-get-behaviour-state
+    $Category: Change  
+    $Subcategory: brain
+    $Minimum Arguments: 1
+    $Maximum Arguments: 1
+    $Return type: number
+    $Description: Returns the current brain state of the ship. Returns a number corresponding to the preset used, or -1 if the ship has no brain.
+    $Parameter:
+        +Description: A ship
+        +Type: ship
+
+$Operator: brain-get-drive-state
+    $Category: Change  
+    $Subcategory: brain
+    $Minimum Arguments: 1
+    $Maximum Arguments: 1
+    $Return type: number
+    $Description: Returns the current state of the ship's nav system. 0 for "Charging", 1 for "Charged", -1 for ships that do not have active brains
+    $Parameter:
+        +Description: A ship
+        +Type: ship
+
+$Operator: brain-get-weapon-state
+    $Category: Change  
+    $Subcategory: brain
+    $Minimum Arguments: 1
+    $Maximum Arguments: 1
+    $Return type: number
+    $Description: Returns the current state of the ship's weapons system. Returns a number correpsonding to the current rate of fire, or -1 for ships that do not have active brains
+    $Parameter:
+        +Description: A ship
+        +Type: ship
+
+$Operator: brain-get-repair-state
+    $Category: Change  
+    $Subcategory: brain
+    $Minimum Arguments: 1
+    $Maximum Arguments: 1
+    $Return type: number
+    $Description: Returns the current state of the ship's self-repair system. Returns _SOMETHING_, or -1 if the ship's brain is inactive
+    $Parameter:
+        +Description: A ship
+        +Type: ship

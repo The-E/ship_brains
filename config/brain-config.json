@@ -1,0 +1,56 @@
+{
+    "GTC Hyperion": {
+        "beam_turrets": ["turret01", "turret02"],
+        "presets": [
+            {
+                "health_max": 100,
+                "health_min": 75,
+                "hull_armor": "Heavy Armor 60",
+                "difficulty_overrides": [
+                    {
+                        "level": "Hard",
+                        "subsystem_armor": "Light Armor 80",
+                        "turret_armor": "Light Armor 80"
+                    }
+                ],
+                "autorepair": {
+                    "hull": {
+                        "repair": 0,
+                        "tickrate": 10,
+                        "variance": 0
+                    },
+                    "subsystem": {
+                        "repair": 1,
+                        "tickrate": 10,
+                        "variance": 0
+                    },
+                    "dead_subsystem": {
+                        "repair": 0,
+                        "tickrate": 10,
+                        "variance": 0
+                    },
+                    "turret": {
+                        "repair": 0,
+                        "tickrate": 10,
+                        "variance": 0
+                    },
+                    "dead_turret": {
+                        "repair": 0,
+                        "tickrate": 10,
+                        "variance": 0
+                    }
+                },
+                "jump": {
+                    "charge_rate": 2,
+                    "tickrate": 6,
+                    "variance": 0
+                },
+                "flares": {
+                    "tickrate": 10,
+                    "type": "Cruiser Flare",
+                    "subsystem": "Weapons"
+                }
+            }
+        ]
+    }
+}
